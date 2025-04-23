@@ -1,0 +1,51 @@
+.card {
+    position: relative;
+    cursor: pointer;
+    transition: transform var(--transition-duration);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 272px;
+    height: 208px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--text-primary-light-standart-text);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* .img {} */
+
+.price {
+    display: flex;
+    column-gap: 9px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 86%;
+    text-align: center;
+    color: var(--text-primary-light-standart-text)
+}
+
+.count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--interface-accent);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--second-family);
+    font-size: 20px;
+    transform: translate(25%, -25%);
+}

@@ -1,0 +1,26 @@
+
+.button {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    color: var(--text-dark-grey-secondary-text);
+    padding: 16px 60px;
+    transition: all 0.3s ease;
+  }
+  
+  .button.active {
+    color: var(--text-primary-light-standart-text);
+    border-bottom: 2px solid var(--colors-interface-accent);
+  }
+  
+  /* @keyframes lineAppear {
+    from { width: 0 }
+    to { width: 600px }
+  }
+   */
+ 
+  .button:hover {
+    color: var(--text-primary-light-standart-text);
+  }

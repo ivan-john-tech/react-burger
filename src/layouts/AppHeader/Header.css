@@ -1,0 +1,23 @@
+
+.header {
+    --header-margin: 40px;
+
+    background-color: var(--interface-modal-bg);
+    margin-top: var(--header-margin);
+    margin-right: var(--header-margin);
+    margin-left: var(--header-margin);
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 16px;
+}
+
+.header__button-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+}

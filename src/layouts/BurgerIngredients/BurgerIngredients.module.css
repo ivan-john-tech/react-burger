@@ -1,0 +1,67 @@
+.section {
+    max-height: 70vh;
+    overflow-y: auto;
+    scroll-margin-top: 104px;
+    scroll-padding-top: 104px;
+}
+
+.section::-webkit-scrollbar {
+    width: 8px;
+    background: yellow;
+  }
+  
+  .section::-webkit-scrollbar-thumb {
+    background: pink;
+    border-radius: 0;
+  }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    scroll-behavior: smooth;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 111%;
+    color: var(--text-primary-light-standart-text);
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    background: var(--interface-bg);
+    z-index: 10;
+    padding: 20px 0 0;
+  }
+
+.tabs {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--text-dark-grey-secondary-text);
+}
+
+.subtitle {
+    text-align: left;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 125%;
+    color: var(--text-primary-light-standart-text);
+}
+
+.text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--text-primary-light-standart-text);
+}
+

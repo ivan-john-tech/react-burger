@@ -1,24 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Header from './layouts/AppHeader/Header';
+import BurgerIngredients from './layouts/BurgerIngredients/BurgerIngredients';
+import BurgerConstructor from './layouts/BurgerConstructor/BurgerConstructor';
 
 function App() {
+  const [selectedIngredients, setSelectedIngredients] = useState<any[]>([]);
+  const [selectedCounts, setSelectedCounts] = useState<{[key: string]: number}>({});
+
+  const handleIngredientAdd = (ingredient: any) => {
+    if (ingredient.type === 'bun') {
+      setSelectedIngredients(prev => [
+        ...prev.filter(item => item.type !== 'bun'),
+        ingredient
+      ]);
+      setSelectedCounts(prev => ({
+        ...prev,
+        [ingredient._id]: 1
+      }));
+    } else {
+      setSelectedIngredients(prev => [...prev, ingredient]);
+      setSelectedCounts(prev => ({
+        ...prev,
+        [ingredient._id]: (prev[ingredient._id] || 0) + 1
+      }));
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <main className='main container'>
+        <BurgerIngredients 
+          onIngredientClick={handleIngredientAdd}
+          selectedCounts={selectedCounts}
+        />
+        <BurgerConstructor ingredients={selectedIngredients} />
+      </main>
     </div>
   );
 }
