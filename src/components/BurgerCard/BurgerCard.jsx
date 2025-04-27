@@ -1,8 +1,8 @@
 import cardStyles from './BurgerCard.module.css'
 
 function Card({ src, name, price, onClick, count }) {
-    return (
 
+    return (
         <div className={cardStyles.card} onClick={onClick}>
              {count > 0 && <div className={cardStyles.count}>{count}</div>}
             <img

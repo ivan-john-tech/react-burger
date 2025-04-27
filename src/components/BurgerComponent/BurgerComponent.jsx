@@ -1,8 +1,6 @@
 import styles from './BurgerComponent.module.css'
 
-function BurgerComponent(props) {
-
-    const { type } = props;
+function BurgerComponent({ type, src, name, price }) {
 
     return (
                 <li className={styles.item}>
@@ -14,13 +12,13 @@ function BurgerComponent(props) {
                     <div className={styles.description}>
                         <img
                             className={styles.img}
-                            src={props.src}
-                            alt={props.name}
+                            src={src}
+                            alt={name}
                             width="80"
                             height="40"
                             />
-                        <p className={styles.text}>{props.name}</p>
-                        <span>{props.price}</span>
+                        <p className={styles.text}>{name}</p>
+                        <span>{price}</span>
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.38488 1.65561C9.58175 1.18895 9.03973 0.758987 8.63011 1.05689L0.411836 7.03382C0.153092 7.222 8.63274e-06 7.52262 8.63274e-06 7.84256V12.4828C8.63274e-06 12.6932 0.131707 12.8811 0.32948 12.9529L3.15637 13.9785C3.65685 14.1601 4.21185 13.9177 4.41879 13.4271L9.38488 1.65561Z" fill="#F2F2F3" />
                         <path d="M0.62116 14.9076C0.322174 14.7916 5.37847e-06 15.0122 2.35835e-06 15.3329C8.89497e-07 15.4889 0.0796849 15.634 0.211271 15.7178L9.23069 21.4574C9.33259 21.5223 9.44078 21.3844 9.35355 21.3008L4.22556 16.3879C4.13043 16.2968 4.01823 16.2254 3.89541 16.1777L0.62116 14.9076Z" fill="#F2F2F3" />

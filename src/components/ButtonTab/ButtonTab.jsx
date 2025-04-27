@@ -1,12 +1,6 @@
-// import styles from './BurgerIngredients.module.css'
 import styles from './ButtonTab.module.css'
 
-const ButtonTab = ({ 
-  children, 
-  active, 
-  sectionId, 
-  onClick 
-}) => {
+function ButtonTab({ children, active, sectionId, onClick }) {
   return (
     <li className={`${styles.tab} ${active ? styles.active : ''}`}>
       <button

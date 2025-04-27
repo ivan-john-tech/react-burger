@@ -1,13 +1,14 @@
-import button from './Button.module.css'
-// import {BurgerIcon, ListIcon, Logo, ProfileIcon} from '@ya.praktikum/react-developer-burger-ui-components'
+import styles from './Button.module.css'
 
-function Button(props) {
+function Button({ icon, description, isActive, onClick }) {
     return (
-        <button className={button.btn}>
-            {props.icon}
-            <span>{props.description}</span>
+        <button 
+            className={`${styles.btn} ${isActive ? styles.active : ''}`} 
+            onClick={onClick}
+        >
+            {icon}
+            <span>{description}</span>
         </button>
     )
 }
-
 export default Button

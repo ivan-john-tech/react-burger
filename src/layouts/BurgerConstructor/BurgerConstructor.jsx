@@ -1,7 +1,5 @@
 import styles from './BurgerConstructor.module.css'
 import BurgerComponent from '../../components/BurgerComponent/BurgerComponent'
-// import Button from '../../components/Button/Button'
-// import { burgers } from '../../utils/data'
 
 function BurgerConstructor({ ingredients }) {
 
@@ -13,7 +11,7 @@ function BurgerConstructor({ ingredients }) {
              {isEmpty ? (
                     <div className={styles.empty}>
                         <p className={styles.emptyText}>
-                            Пожалуйста, быберите булку
+                            Пожалуйста, выберите булку
                         </p>
                     </div>
                 ) : (

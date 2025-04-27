@@ -12,14 +12,8 @@
   
   .button.active {
     color: var(--text-primary-light-standart-text);
-    border-bottom: 2px solid var(--colors-interface-accent);
+    border-bottom: 2px solid var(--interface-accent);
   }
-  
-  /* @keyframes lineAppear {
-    from { width: 0 }
-    to { width: 600px }
-  }
-   */
  
   .button:hover {
     color: var(--text-primary-light-standart-text);
