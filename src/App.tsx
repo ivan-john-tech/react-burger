@@ -31,6 +31,16 @@ function App() {
     }
   };
 
+  const handleIngredientRemove = (ingredientId: any) => {
+    setSelectedIngredients(prev => prev.filter(item => item._id !== ingredientId))
+
+    setSelectedCounts(prev => {
+      const newCounts = {...prev}
+      delete newCounts[ingredientId]
+      return newCounts
+    })
+  }
+
   return (
     <div className="App">
       <Header 
@@ -42,7 +52,10 @@ function App() {
             onIngredientClick={handleIngredientAdd}
             selectedCounts={selectedCounts}
           />
-          <BurgerConstructor ingredients={selectedIngredients} />
+          <BurgerConstructor 
+            ingredients={selectedIngredients} 
+            onIngredientRemove={handleIngredientRemove}
+          />
         </main>
       )}
     </div>

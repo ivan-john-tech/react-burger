@@ -22,6 +22,10 @@
     height: 80px;
 }
 
+.description svg {
+    cursor: pointer;
+}
+
 .text {
     text-align: left;
 }

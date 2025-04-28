@@ -1,7 +1,7 @@
 import styles from './BurgerConstructor.module.css'
 import BurgerComponent from '../../components/BurgerComponent/BurgerComponent'
 
-function BurgerConstructor({ ingredients }) {
+function BurgerConstructor({ ingredients, onIngredientRemove }) {
 
     const totalPrice = ingredients.reduce((sum, item) => sum + item.price, 0);
     const isEmpty = ingredients.length === 0;
@@ -24,6 +24,7 @@ function BurgerConstructor({ ingredients }) {
                         name={item.name}
                         price={item.price}
                         type={item.type}
+                        onDelete={() => onIngredientRemove(item._id)}
                         />
                     ))}
                 </ul>
